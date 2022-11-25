@@ -1,9 +1,9 @@
 {
-    "name": "fivefilters/readability.php",
+    "name": "blackrabbit/readability.php",
     "type": "library",
     "description": "A PHP port of Readability.js",
     "keywords": ["readability", "html"],
-    "homepage": "https://github.com/fivefilters/readability.php",
+    "homepage": "https://github.com/blackrabbit944/readability.php",
     "license": "Apache-2.0",
     "authors": [
         {
@@ -31,7 +31,7 @@
         "ext-dom": "*",
         "ext-xml": "*",
         "ext-mbstring": "*",
-        "psr/log": "^1.0",
+        "psr/log": "^3.0",
         "masterminds/html5": "^2.0",
         "league/uri": "~6.7.2"
     },
