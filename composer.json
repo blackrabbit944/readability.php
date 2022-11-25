@@ -10,21 +10,15 @@
             "name": "Andres Rey",
             "email": "andreskrey@gmail.com",
             "role": "Original Developer"
-        },
-        {
-            "name": "Keyvan Minoukadeh",
-            "email": "keyvan@fivefilters.org",
-            "homepage": "https://www.fivefilters.org",
-            "role": "Developer/Maintainer"
         }
     ],
     "autoload": {
         "psr-4": {
-            "fivefilters\\Readability\\": "src/"
+            "blackrabbit\\Readability\\": "src/"
         }
     },
     "autoload-dev": {
-        "psr-4": {"fivefilters\\Readability\\Test\\": "test"}
+        "psr-4": {"blackrabbit\\Readability\\Test\\": "test"}
     },
     "require": {
         "php": ">=7.4.0",

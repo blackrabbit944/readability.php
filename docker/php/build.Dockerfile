@@ -1,6 +1,6 @@
 # Use this file to build a Docker image using the versions of PHP and Libxml specified.
 #
-# We have pre-built images at https://hub.docker.com/r/fivefilters/php-libxml which are 
+# We have pre-built images at https://hub.docker.com/r/blackrabbit/php-libxml which are 
 # faster to load than building from this file.
 #
 # To build using this file, type the following command from the root project folder 
@@ -8,7 +8,7 @@
 #
 # docker build --build-arg PHP_VERSION=7.4 --build-arg LIBXML_VERSION=2.9.12 -t php-libxml -f ./docker/php/build.Dockerfile .
 
-# To upload the image to Docker Hub, the tag (-t) value should be something like org/repo:tag, e.g. for us, fivefilters/php-libxml:php-8-libxml-2.9.12
+# To upload the image to Docker Hub, the tag (-t) value should be something like org/repo:tag, e.g. for us, blackrabbit/php-libxml:php-8-libxml-2.9.12
 # The tag can be applied afterwards too, e.g. docker tag php-libxml org/repo:tag
 
 ARG PHP_VERSION=8.1

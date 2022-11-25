@@ -1,10 +1,10 @@
 <?php
 
-namespace fivefilters\Readability\Test;
+namespace blackrabbit\Readability\Test;
 
-use fivefilters\Readability\Configuration;
-use fivefilters\Readability\ParseException;
-use fivefilters\Readability\Readability;
+use blackrabbit\Readability\Configuration;
+use blackrabbit\Readability\ParseException;
+use blackrabbit\Readability\Readability;
 
 ini_set('memory_limit','1024M');
 

@@ -1,5 +1,5 @@
 # Load pre-built image of PHP (php-cli) and libxml. 
-# See https://hub.docker.com/r/fivefilters/php-libxml for supported versions
+# See https://hub.docker.com/r/blackrabbit/php-libxml for supported versions
 # Use build.Dockerfile to compile new versions of PHP/libxml
 
 # For reference, default package versions for Ubuntu are:
@@ -13,6 +13,6 @@
 
 ARG PHP_VERSION
 ARG LIBXML_VERSION
-FROM fivefilters/php-libxml:php-${PHP_VERSION}-libxml-${LIBXML_VERSION}
+FROM blackrabbit/php-libxml:php-${PHP_VERSION}-libxml-${LIBXML_VERSION}
 
 RUN apt-get update

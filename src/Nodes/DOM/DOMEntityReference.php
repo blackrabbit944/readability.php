@@ -1,8 +1,8 @@
 <?php
 
-namespace fivefilters\Readability\Nodes\DOM;
+namespace blackrabbit\Readability\Nodes\DOM;
 
-use fivefilters\Readability\Nodes\NodeTrait;
+use blackrabbit\Readability\Nodes\NodeTrait;
 
 class DOMEntityReference extends \DOMEntityReference
 {

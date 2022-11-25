@@ -6,25 +6,25 @@ Andres Rey, the [original developer](https://github.com/andreskrey/readability.p
 
 Please bear with us while we catch up with [Readability.js](https://github.com/mozilla/readability) changes. There'll be a new release (3.0.0) when we're ready.
 
-For the changes we've made so far in this repository, please see our [blog post](https://www.fivefilters.org/2021/readability/).
+For the changes we've made so far in this repository, please see our [blog post](https://www.blackrabbit.org/2021/readability/).
 
 ## About
 
-[![Latest Stable Version](https://poser.pugx.org/fivefilters/readability.php/v/stable)](https://packagist.org/packages/fivefilters/readability.php) [![Tests](https://github.com/fivefilters/readability.php/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/fivefilters/readability.php/actions/workflows/main.yml)
+[![Latest Stable Version](https://poser.pugx.org/blackrabbit/readability.php/v/stable)](https://packagist.org/packages/blackrabbit/readability.php) [![Tests](https://github.com/blackrabbit/readability.php/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/blackrabbit/readability.php/actions/workflows/main.yml)
 
 PHP port of *Mozilla's* **[Readability.js](https://github.com/mozilla/readability)**. Parses html text (usually news and other articles) and returns **title**, **author**, **main image** and **text content** without nav bars, ads, footers, or anything that isn't the main body of the text. Analyzes each node, gives them a score, and determines what's relevant and what can be discarded.
 
-![Screenshot](https://raw.githubusercontent.com/fivefilters/readability.php/assets/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/blackrabbit/readability.php/assets/screenshot.png)
 
 The project aim is to be a 1 to 1 port of Mozilla's version and to follow closely all changes introduced there, but there are some major differences on the structure. Most of the code is a 1:1 copy –even the comments were imported– but some functions and structures were adapted to suit better the PHP language.
 
 **Original Developer**: Andres Rey
 
-**Developer/Maintainer**: FiveFilters.org
+**Developer/Maintainer**: blackrabbit.org
 
 ## Code porting
 
-Master branch - Up to date on 26 August 2021, with the exception of a [piece of code](https://github.com/fivefilters/readability.php/commit/1c662465bded2ab3acf3b975a1315c8c45f0bf73#diff-b9b31807b1a39caec18ddc293e9c52931ba8b55191c61e6b77a623d699a599ffR1899) which doesn't produce the same results in PHP for us compard to the JS version. Perhaps there's an error, or some difference in the underlying code that affects this. If you know what's wrong, please feel free to drop us a note or submit a pull request. :)
+Master branch - Up to date on 26 August 2021, with the exception of a [piece of code](https://github.com/blackrabbit/readability.php/commit/1c662465bded2ab3acf3b975a1315c8c45f0bf73#diff-b9b31807b1a39caec18ddc293e9c52931ba8b55191c61e6b77a623d699a599ffR1899) which doesn't produce the same results in PHP for us compard to the JS version. Perhaps there's an error, or some difference in the underlying code that affects this. If you know what's wrong, please feel free to drop us a note or submit a pull request. :)
 
 Version 2.1.0 - Up to date with Readability.js up to [19 Nov 2018](https://github.com/mozilla/readability/commit/876c81f710711ba2afb36dd83889d4c5b4fc2743).
 
@@ -38,16 +38,16 @@ PHP 7.4+, ext-dom, ext-xml, and ext-mbstring. To install these dependencies (in 
 
 First you have to require the library using composer:
 
-`composer require fivefilters/readability.php`
+`composer require blackrabbit/readability.php`
 
 Then, create a Readability class and pass a Configuration class, feed the `parse()` function with your HTML and echo the variable:
 
 ```php 
 <?php
 require __DIR__ . '/vendor/autoload.php';
-use fivefilters\Readability\Readability;
-use fivefilters\Readability\Configuration;
-use fivefilters\Readability\ParseException;
+use blackrabbit\Readability\Readability;
+use blackrabbit\Readability\Configuration;
+use blackrabbit\Readability\ParseException;
 
 $readability = new Readability(new Configuration());
 
@@ -118,7 +118,7 @@ Then you pass this Configuration object to Readability. The following options ar
 - **OriginalURL**: default value `http://fakehost`, original URL from the article used to fix relative URLs.
 - **KeepClasses**: default value `false`, which removes all `class="..."` attribute values from HTML elements.
 - **Parser**: default value `html5`, which uses HTML5-PHP for parsing. Set to `libxml` to use that instead (not recommended for modern HTML documents).
-- **SummonCthulhu**: default value `false`, remove all `<script>` nodes via regex. This is not ideal as it might break things, but if you've set the parser to libxml (see above), it might be the only solution to [libxml problems with unescaped javascript](https://github.com/fivefilters/readability.php#known-libxml-parsing-issues).
+- **SummonCthulhu**: default value `false`, remove all `<script>` nodes via regex. This is not ideal as it might break things, but if you've set the parser to libxml (see above), it might be the only solution to [libxml problems with unescaped javascript](https://github.com/blackrabbit/readability.php#known-libxml-parsing-issues).
 
 ### Debug log
 

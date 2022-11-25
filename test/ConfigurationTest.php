@@ -1,8 +1,8 @@
 <?php
 
-namespace fivefilters\Readability\Test;
+namespace blackrabbit\Readability\Test;
 
-use fivefilters\Readability\Configuration;
+use blackrabbit\Readability\Configuration;
 use Monolog\Handler\NullHandler;
 use Monolog\Logger;
 
